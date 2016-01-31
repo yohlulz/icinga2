@@ -1,0 +1,8 @@
+===================================================================
+MySQL user 'root' has no password but only allows local connections
+MySQL user 'debian-sys-maint' password set to ox8MNgyrK5JOAYy
+MySQL user 'icinga' password set to icinga
+MySQL user 'icinga2-ido-mysq' password set to icinga
+MySQL user 'icinga-web' password set to icinga
+MySQL user 'icingaweb2' password set to icinga
+===================================================================

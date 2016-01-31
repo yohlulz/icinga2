@@ -149,7 +149,7 @@ echo "MySQL user 'icinga-web' password set to ${ICINGA_WEB_PASSWORD}"
 echo "MySQL user 'icingaweb2' password set to ${ICINGAWEB2_PASSWORD}"
 echo "==================================================================="
 
-touch ${initfile}
+#touch ${initfile}
 fi
 
 echo "Starting Supervisor.  You can safely CTRL-C and the container will continue to run with or without the -d (daemon) option"

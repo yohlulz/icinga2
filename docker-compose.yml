@@ -1,7 +1,21 @@
-icinga:
-  image: jordan/icinga2 
-  environment:
-   - ICINGA_PASSWORD=YOUR_PASSWORD
-   - ICINGA_WEB_PASSWORD=YOUR_PASSWORD
-   - ICINGAWEB2_PASSWORD=YOUR_PASSWORD
-   - IDO_PASSWORD=YOUR_PASSWORD
+icinga2:
+ image: utcn/icinga2
+ container_name: docker_icinga2
+ hostname: icinga2-master
+ ports:
+ - "80:80"
+ - "443:443"
+ - "5665:5665"
+ - "3306:3306"
+ volumes:
+ - ./data/etc/icinga2:/etc/icinga2
+ external_links:
+ - prod_hbase:hbase
+ - prod_tsdb_rw:tsdb_rw
+ - prod_tsdb_ro_1:tsdb_ro_1
+ - prod_tsdb_ro_2:tsdb_ro_2
+ environment:
+ - ICINGA_PASSWORD=icinga
+ - ICINGA_WEB_PASSWORD=icinga
+ - ICINGAWEB2_PASSWORD=icinga
+ - IDO_PASSWORD=icinga
